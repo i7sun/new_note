@@ -1,0 +1,111 @@
+1.自动处理分页逻辑
+	Model::paginate(15);
+	Model::where('cars',2)->paginate(15);
+	
+2.使用简单模板，只有"上一页"或"下一页"链接
+	Model::where('cars',2)->simplePaginate(15);
+	
+3.手动分页
+	Paginator::make($items,$totalItems,$perPate);
+	
+4.在页面打印分页导航栏
+	$variable->links();
+	
+5.获取当前页数据数量
+	$results->count();
+	
+6.获取当前页页码
+	$results->currentPage();
+	
+7.获取结果集中第一条数据的结构编号
+	$results->firstItem();
+	
+8.创建分页URL范围
+	$results->getUrlRange($start,$end);
+	
+9.是否有多页
+	$results->hasMorePages();
+
+10.获取结果集中最后一条数据的结果编号
+	$results->lastItem();
+	
+11.获取最后一页的编码(在'simplePaginate'中无效)
+	$results->lastPage();
+	
+12.获取下一页的url
+	$results->nextPageUrl();
+	
+13.当前是否为第一页
+	$results->onFirstPage();
+	
+14.获取前一页的URL
+	$results->previousPageUrl();
+	
+15.数据总数
+	$results->total();
+	
+16.获取指定页的URL
+	$results->url($page);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

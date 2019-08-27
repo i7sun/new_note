@@ -1,0 +1,2 @@
+git init	初始化一个Git仓库
+git clone	从现有的仓库中拷贝项目

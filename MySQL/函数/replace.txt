@@ -1,0 +1,2 @@
+﻿replace 替换
+UPDATE tb1 SET f1=REPLACE(f1, 'abc', 'def')

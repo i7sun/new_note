@@ -1,0 +1,11 @@
+git init 初始化一个Git仓库
+	执行完git init命令后，Git仓库会生成一个.git目录，该目录包含了资源的所有元数据
+	其他的项目目录保持不变
+	
+使用方法
+1.使用当前目录作为Git仓库
+	只需要使它初始化 git init
+	
+2.使用指定目录作为git仓库
+	git init newrepo
+	初始化后，会在newrepo目录下出现一个名为.git的目录

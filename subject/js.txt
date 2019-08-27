@@ -1,0 +1,22 @@
+1.js定义二纬数组
+	js不支持二纬数组定义，可以用arr[0] = new array()
+
+2.js在指定时候后执行代码
+	setTimeout( "go2b()",5000 ); //5秒钟后自动执行go2b()
+	
+3.js页面跳转
+	window.location = "b.html";
+	window.close();
+	
+4.使用JavaScript写出三种产生一个Image 标签的方法
+	1.var img = new Image();
+	2.var img = document.createElementById("image")
+	3.img.innerHTML = "<img src='xxx.jpg' />"
+	
+5.js中网页前进
+	history.forward();
+	history.go(1);
+	
+5.js中网页后退
+	history.back();
+	history.go(-1);

@@ -1,0 +1,9 @@
+1.App::setLocale('en');
+
+2.Lang::get('messages.welcome');
+
+3.Lang::get('messages.welcome',array('foo'=>'Bar'));
+
+4.Lang::has('messages.welcome');
+
+5.Lang::choice('messages.apples',10);

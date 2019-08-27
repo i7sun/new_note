@@ -1,0 +1,45 @@
+redis键(key)命令用于管理redis的键
+
+1.DEL key
+	用于删除已存在的键，不存在的key会被忽略
+	返回被删除key的数量
+	
+2.DUMP key
+	序列化给定key,并返回被序列化的值
+	如果key不存在,返回 nil,否则返回序列化之后的值
+	
+3.EXISTS key
+	检查给定的key是否存在
+	存在返回1，不存在返回0
+	
+4.EXPIRE key seconds
+	设置key的过期时间
+	设置成功返回1，其他情况返回0
+	
+5.KEYS pattern
+	获取给定模式pattern的key
+	
+6.MOVE key db
+	将当前数据库的key移动到给定的数据库db当中
+	
+7.PERSIST key
+	移除key的过期时间，key将持久保持
+	
+8.PTTL key
+	以毫秒为单位返回key的剩余的过期时间
+	key不存在返回-2,没设置生存时间时，返回-1
+	
+9.TTL key
+	以秒为单位返回key的剩余的过期时间
+	
+10.RANDOMKEY
+	从当前数据库中随机返回一个key
+	
+11.RENAME key newkey
+	修改key的名称
+	
+12.RENAMENX key newkey
+	仅当newkey不存在时，将key改名为newkey
+	
+13.TYPE key
+	返回key所存储的值的类型

@@ -1,0 +1,47 @@
+容器生命周期管理
+	docker run ：创建一个新的容器并运行一个命令
+	docker start :启动一个或多个已经被停止的容器
+	docker stop :停止一个运行中的容器
+	docker restart :重启容器
+	docker kill :杀掉一个运行中的容器。
+	docker rm ：删除一个或多少容器
+	docker pause :暂停容器中所有的进程。
+	docker unpause :恢复容器中所有的进程。
+	docker create ：创建一个新的容器但不启动它
+	docker exec ：在运行的容器中执行命令
+		在容器 mynginx 中开启一个交互模式的终端
+		docker exec -it  mynginx /bin/ash
+
+容器操作
+	docker ps : 列出容器
+	docker inspect : 获取容器/镜像的元数据
+	docker top :查看容器中运行的进程信息
+	docker attach :连接到正在运行中的容器
+	docker events : 从服务器获取实时事件
+	docker logs : 获取容器的日志
+	docker wait : 阻塞运行直到容器停止，然后打印出它的退出代码
+	docker export :将文件系统作为一个tar归档文件导出到STDOUT
+	docker port :列出指定的容器的端口映射，或者查找将PRIVATE_PORT NAT到面向公众的端口
+	
+容器rootfs命令
+	docker commit :从容器创建一个新的镜像
+	docker cp :用于容器与主机之间的数据拷贝
+	docker diff : 检查容器里文件结构的更改
+	
+镜像仓库
+	docker login : 登陆到一个Docker镜像仓库，如果未指定镜像仓库地址，默认为官方仓库 Docker Hub
+	docker logout : 登出一个Docker镜像仓库，如果未指定镜像仓库地址，默认为官方仓库 Docker Hub
+	docker pull : 从镜像仓库中拉取或者更新指定镜像
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

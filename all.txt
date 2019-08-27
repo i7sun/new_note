@@ -1,0 +1,45 @@
+﻿c
+c++
+python
+php
+java
+js
+linux
+mysql
+redis
+nginx
+apache
+docker
+git
+composer
+RESTful
+swool
+swoft
+namespace
+php-fpm
+http协议
+html
+jquery
+laravel
+tp
+yii
+DevOps
+echarts
+php扩展
+微服务
+重构
+设计模式
+数据结构
+正则
+
+consul
+rpc
+
+
+lua
+
+Kubernetes(k8s)	使用yaml文件创建deployment
+Jenkins		主要用于持续、自动的构建/测试软件项目、监控外部任务的运行
+
+网站压力测试工具
+	Jmeter,webbench

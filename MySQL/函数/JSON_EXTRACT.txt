@@ -1,0 +1,2 @@
+JSON_EXTRACT(device_business_type.content,'$.real.receiptType')
+	返回表device_business_type的content字段中 二纬度json中 real下的receiptType字段

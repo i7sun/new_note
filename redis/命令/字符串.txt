@@ -1,0 +1,13 @@
+redis字符串数据类型的相关命令用于管理redis字符串的值
+
+1.SET key value	设置指定key的值
+2.GET key 获取指定key的值
+3.GETRANGE key start end	返回key中字符串的子字符串
+4.GETSET key value	将给定key的值设为value,并返回key的旧值
+5.GETBIT key offset 
+	对key所存储的字符串值,获取指定偏移量上的位(bit)
+	
+6.MGET key1 [key2 ...]
+	获取所有给定key的值
+	
+7.

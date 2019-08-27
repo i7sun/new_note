@@ -1,0 +1,20 @@
+﻿Kubernetes系列之四：使用yaml文件创建deployment来部署一个应用程序到k8s集群
+
+Kubernetes
+	一个开源的，用于管理云平台中多个主机上的容器化的应用，
+	Kubernetes的目标是让部署容器化的应用简单并且高效（powerful）,
+	Kubernetes提供了应用部署，规划，更新，维护的一种机制
+	
+Kubernetes 特点
+    可移植: 支持公有云，私有云，混合云，多重云（multi-cloud）
+    可扩展: 模块化，插件化，可挂载，可组合
+    自动化: 自动部署，自动重启，自动复制，自动伸缩/扩展
+    https://www.kubernetes.org.cn/doc-11
+	https://www.kubernetes.org.cn/k8s
+
+Kubernetes作为容器集群管理工具
+
+
+https://my.oschina.net/jamesview/blog/2994112		k8s和docker简介
+	
+	

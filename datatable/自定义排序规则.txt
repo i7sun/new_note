@@ -1,0 +1,36 @@
+//添加datatables自定义排序规则
+	jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+		"html-percent-pre": function (a) {
+			return parseFloat(a);
+		},
+		"html-percent-asc": function (a, b) {                //正序排序引用方法
+			return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+		},
+		"html-percent-desc": function (a, b) {                //倒序排序引用方法
+			return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+		}
+	});
+
+	dttable = $('#main_table').dataTable();
+	dttable.fnClearTable(); 	//清空一下table
+	dttable.fnDestroy(); 		//还原初始化了的datatable
+	$('#light_tab').html(html);
+	$('#main_table').DataTable({
+		responsive: true,
+		"aoColumns": [
+			null,
+			null,
+			{ "sType": "html-percent"},		//第三列自定义排序规则
+			null,
+			null,
+			null,
+			null,
+		],
+		iDisplayLength: 25,
+		language: {
+			url: 'i18n/<?=$_COOKIE["lang"]?>/datatable.json'
+		},
+		"fnInitComplete": function(oSettings, json) {
+			$("#check_whole_box").show();
+		}
+	});

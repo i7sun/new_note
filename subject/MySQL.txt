@@ -1,0 +1,16 @@
+1.MySQL数据库常用存储引擎的名称
+	MyISAM,InnoDB,Memory
+	
+2.设置结束符
+	DELIMITER //	
+	
+3.存储过程
+
+4.视图
+
+5.增删改查
+
+6.case when then,if
+
+7.mysql数据库如何让自增字段从0开始
+	truncate table 表名

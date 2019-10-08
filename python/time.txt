@@ -1,0 +1,5 @@
+1.停止1秒
+	import time
+	time.sleep(1)	#停止1秒	
+	time.time()		#获取当前的时间戳
+	

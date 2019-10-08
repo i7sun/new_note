@@ -1,0 +1,14 @@
+import os
+
+#打开并获取文件内容
+file = open("文件名称", "rb")	#打开文件
+content = file.read()			#读取文件内容
+file.close()					#关闭文件
+
+#往文件中写入内容
+file = open("文件名称", "wb")	#打开文件
+file.write(content)				#往文件中写入内容
+file.close()					#关闭文件
+
+os.mkdir(文件夹名称)	#创建文件夹
+os.listdir(文件夹名称)	#获取文件中所有的文件名

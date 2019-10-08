@@ -1,0 +1,123 @@
+1、区别
+简历上的技术特点不一样；
+项目经历不一样。
+
+2、面试技能点
+
+
+基础知识、面向对象：（内存生存-堆栈）(C语言)
+内存的存储：变量
+全局区（静态区）：全局变量、静态变量
+栈区：变量名
+堆区：对象、数组
+代码区：存储执行过程中的代码二进制文件
+常量区：define
+
+常量与变量：
+引用变量  PHP版本
+unset()  不会销毁内存空间
+$b = &$a;
+unset($a);
+$b = ?
+对象是特殊的变量(PHP Python(变量全部是引用的) Java): 引用变量
+监控内存执行情况:(memory_get_usage())
+
+运算符优先级：
+（） 递增、减  数学运算 比较 逻辑 三目  赋值
+数据类型、
+预定义常量:   __FILE__  __DIR__  __CLASS__  __TRAIT__  __METHOD__  __NAMESPACE__
+常量的定义(define defined const)
+布尔类型的转换
+为false的七种情况：0 0.0 '' '0' flase array() null
+出现null的三种情况（unset($a)、直接申明、未定义的变量）
+超全局变量数组：pathinfo模式:
+$_SERVER['PATH_INFO']   SCRIPT_FILENAME  绝对路径
+SCRIPT_NAME(当前文件名)   PHP_SELF(index.php)  QUERY_STRING(后面的参数)   REQUEST_URI(URL上的路径) index.php/a/bc
+$_GET $_POST $_REQUEST $_COOKIE $_ENV $_FILES
+$_SERVER (REFFERER  )
+
+流程控制结构
+跳出循环(break continue)
+遍历数组的方式：
+foreach( $data as $k => $v )   遍历索引、关联数组 执行reset()重置
+while list each  组合循环 遍历索引、关联数组 不会执行reset()操作
+
+字符串处理:  implode explode strstr number_format()
+数组函数(分类)--队列、集合、键值处理
+array_pop()  array_push()  array_shift() array_unshift()
+array_keys() array_values() array_diff() array_merge()
+函数（闭包）
+$a = function(){ $b = 123; $c = 456; }      //
+$a();       //调用的时候执行上面闭包里面方法体的代码
+
+正则表达式
+
+
+面向对象：
+基础类
+访问权限控制(public protected private)、 封装、继承、多态
+抽象 abstract    类中有抽象方法就必须定义为抽象类
+接口：   方法都是抽象的，  没有方法体
+final类： 不可被继承、不可被重写
+魔术方法：__call(路径)   __callstatic(路径)   调用不存在的方法/静态方法时自动调用该方法
+__clone() __sleep() __wakeup() __get() __set() __construct() __destruct()
+静态延迟:   static::method();    根据context(上下文环境)不同调用不同位置的方法
+高级特性：
+命名空间   根命名空间(\)、相对命名空间
+use a\b\c  ==   include('c.class.php');   new c();
+PHP7 命名空间   use a\b\{c,d,e,f as f1 }
+在composer.json中定义psr4：  composer dump-autoload
+trait(性状): trait不能实例化
+trait a{
+    public function b(){ //coding }
+}
+class c {
+    use a;
+}
+$obj = new c();
+存在同名方法的时候：使用as 别名  insteadof  代替
+use a,a1{
+    a::method as a1;
+    a1::method insteadof a;
+}
+$obj->a1();
+
+设计模式：
+框架班：单例模式、工厂模式、facade、适配器、策略==
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

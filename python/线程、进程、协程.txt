@@ -1,0 +1,110 @@
+1.线程
+	使用threading模块
+	
+2.创建线程
+	import threading
+	t = threading.Thread(target=fun)
+	t.start()
+	
+	t1 = Thread(target=fun, args=(g_nums,))
+	t1.start()
+	
+3.获取所有线程
+	threading.enumerate()
+	
+4.获取所有线程个数
+	len(threading.enumerate())
+	
+5.线程执行代码封装
+	定义一个新的子类class，
+	继承threading.Thread，然后重写run方法
+	import threading
+	import time
+	class MyThread(threading.Thread):
+		def run(self):
+			for i in range(3):
+				time.sleep(1)
+				print('abc')
+				
+	t = MyThread()
+    t.start()
+
+6.锁	
+	1.创建锁
+	mutex = threading.Lock()	//这是一个全局的锁
+	2.锁定
+	mutex.acquire()
+	3.释放
+	mutex.release()
+	
+	
+7.进程
+	from multiprocessing import Process
+
+8.进程的创建
+	p = Process(target=run_proc)
+	p.start()
+	
+9.获取当前进程的进程号
+	import os
+	pid = os.getpid()	#主进程或子进程id
+	ppid = os.getppid()	#父进程id
+	
+10.消息队列
+	from multiprocessing import Queue
+	q=Queue(3) #初始化一个Queue对象，最多可接收三条put消息
+	
+11.消息队列操作函数
+    Queue.qsize()：返回当前队列包含的消息数量；
+    Queue.empty()：如果队列为空，返回True，反之False ；
+    Queue.full()：如果队列满了，返回True,反之False；
+    Queue.get([block[, timeout]])：获取队列中的一条消息，然后将其从列队中移除，block默认值为True；
+	Queue.put() 往队列中添加消息
+	
+12.进程池
+	#多进程并发的Queue队列
+	from multiprocessing import Pool
+	multiprocessing.Queue()				#消息队列
+	multiprocessing.Manager().Queue()	#进程池队列	
+	
+	po = Pool(3)  # 定义一个进程池，最大进程数3
+	po.apply_async(worker,(i,))	#使用非阻塞方式调用func
+	po.close()：关闭Pool，使其不再接受新的任务；
+	po.join()：主进程阻塞，等待子进程的退出， 必须在close或terminate之后使用；
+	po.terminate()：不管任务是否完成，立即终止；
+
+13.尝试操作失败直接跳过
+try:
+	
+except:
+	pass	
+	
+14.迭代器
+	1.可迭代对象
+		一个具备了__iter__方法的对象，就是一个可迭代对象
+		具备了__next__方法,就可以通过next()调用该方法获取迭代数据
+		__next__ 方法中返回 raise StopIteration 时，迭代结束
+	
+	2.怎么判断对象是否可迭代
+		from collections import Iterator
+		isinstance([],Iterator)
+		
+	3.怎么获取迭代器中的数据
+		对获取到的迭代器不断使用next()函数来获取下一条数据
+
+
+15.生成器
+	1.创建生成器
+		1.1 data = (x for x in range(5))
+		1.2 通过函数创建生成器
+		1.3 使用send唤醒,从第二次开始可以使用send传递一个参数，y = yield x ，x为返回值,y为接受传递的值
+			f = gen()
+			next(f)
+			f.send('haha')
+		
+16.协程yield
+
+17.协程greenlet
+
+18.协程gevent
+	

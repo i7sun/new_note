@@ -1,0 +1,16 @@
+1.数组函数
+	arr.append()	往数组中追加元素
+	
+2.数学函数
+	import random
+	random.random() #随机生成0-1之间的浮点数
+	
+3.range()
+	生成一个列表
+	range(10)
+	range(10,20)
+
+4.获取用户操作信息
+	变量 = input("提示")		#获取用户输入信息
+	
+	

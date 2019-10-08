@@ -1,4 +1,15 @@
-1.正则表达式
+1.正则表达式函数
+	preg_filter(正则,替换,字符串) 执行一个正在表达式的搜索和替换
+	preg_replace(正则,替换,字符串) 执行一个正则表达式的搜索和替换
+	preg_grep(正则,数组) 返回数组中匹配的元素组成的数组
+	preg_match_all (正则,$subject[,array &$matches]
+		搜索subject中所有匹配的结果并且将他们输入到matches中，返回匹配的次数
+	preg_replace_callback ($pattern,$callback,$subject)
+		执行一个正则表达式搜索并用回调替换
+	preg_match ($pattern,$subject [, array &$matches])
+		搜索subject与pattern给定的正则表达式的一个匹配,返回匹配0次或1次或失败
+	preg_split($pattern,string $subject)
+		通过正则表达式分隔字符串为数组
 
 2.$_SERVER各项的意义
 	$_SERVER["REMOTE_ADDR"]		当前页面用户的 IP 地址
@@ -6,7 +17,20 @@
 	$_SERVER["DOCUMENT_ROOT"]	当前运行脚本所在的文档根目录
 	
 3.HTTP各状态码的含义
-	401 未授权
+	1.消息系列
+	2.成功系列
+	3.重定向系列	
+	4.请求错误系列	
+	5.服务器端错误系列 
+	
+	302:临时转移成功，请求的内容已转移到新位置 
+	403:禁止访问 
+	500:服务器内部错误 
+	401代表未授权
+	
+	
+	
+	
 	
 4.php文件相关函数
 	opendir($dir)		打开目录
@@ -14,8 +38,25 @@
 	closedir($handle)	关闭目录
 	
 5.数组函数
-	array_push($users,'john')	将一个或多个单元，压入数组的末尾
-	array_pop($arr)		将数组中最后一个单元弹出并返回
+	1.array_push($users,'john')	将一个或多个单元，压入数组的末尾
+	2.array_pop($arr)		将数组中最后一个单元弹出并返回
+	3.array_column($arr,$key)		php version > 5.5
+		返回数组中指定的一列，如
+			array(
+				array('name'=>'liu','sex'=>'boy'),
+				array('name'=>'sheng','sex'=>'girl'),
+			)
+		返回该数值中的name列的值组成一个新的数组 array('liu','sheng');
+	4.array_multisort()	对多个数组或多维数组进行排序
+		对多纬数组按照某一个列排序
+		$name_list = array_column($arr,'name');
+		array_multisort($name_list,SORT_DESC,$data);
+		
+		
+	
+		
+
+	
 	
 6.字符串函数
 	strrchr($str,'a')	返回字符在字符串中最后一次出现到结尾的部分
@@ -47,6 +88,12 @@
         session_set_cookie_params($lifeTime);
         session_start();
 		
+	3.判断及获取PHP版本
+		if(version_compare(PHP_VERSION,'5.5.0', '<')){
+			echo '当前版本为'.phpversion().'小于5.5.0';
+		}
+		
+	
 10.常用的排序算法
 
 11.echo count("abc"); 输出什么？
@@ -82,3 +129,12 @@
 	
 19.网站压里测试工具
 	Jmeter webbench
+	
+20.php.ini 中Safe_mode影响哪些函数
+	1.Safe_mode	是php非常重要的内嵌的安全机制。默认是关闭的
+	2.fopen() file() require(),只能用于调用这些函数有相同脚本的拥有者
+	3.创建新文件(限制用户只在该用户拥有目录下创建文件)
+	4.用户调用popen() system()exec()等脚本，只有脚本处在safe_mode_exec_dir配置指令指定的目录中才可能
+	5.mysql服务器所用的用户名必须与调用mysql_connect()的文件的拥有者用户名相同
+	
+

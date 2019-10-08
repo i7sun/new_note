@@ -14,3 +14,6 @@
 
 7.mysql数据库如何让自增字段从0开始
 	truncate table 表名
+	
+8.mysql调试
+	explain sql
